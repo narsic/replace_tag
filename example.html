@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Replace Tag Example</title>
+        <script src="js/replacetag.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <code id="contentData" >
+            <p>first tag</p>
+                <remove_me>First tag must removed<br/></remove_me>
+                <remove_me>tag must removed</remove_me>
+            <p>another tag</p>
+        </code>
+        <hr />
+        <code id="replacedAllContentData" >
+        </code>
+        <hr />
+        <code id="replacedContentData" >
+        </code>
+        <script type="text/javascript">
+            var content = document.getElementById('contentData').innerHTML;
+            document.getElementById('replacedAllContentData').innerHTML = ReplaceTag(content, 'remove_me', false);
+            document.getElementById('replacedContentData').innerHTML = ReplaceTag(content, 'remove_me');
+        </script>
+    </body>
+</html>
